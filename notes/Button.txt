@@ -1,0 +1,27 @@
+Button Style ID
+
+0 = groupname
+1 = image
+2 = image index
+3 = border size
+4 = image color
+5 = text color
+6 = text font
+
+Button Location ID
+
+0 = name
+1 = x
+2 = y
+3 = w
+4 = h
+
+Button State ID
+
+0 = id
+1 = enable?
+2 = button script
+3 = button disabled script
+4 = button alternative script
+5 = button group
+6 = Text
