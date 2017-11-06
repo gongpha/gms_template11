@@ -13,3 +13,15 @@ draw_roundrect(x,y,xx+w,yy+h,0)
 //Caption
 draw_rectangle_color(xx+5,yy+5,xx+w-5,yy+35,c_black,c_white,c_white,c_black,0)
 draw_box(img_window_cornermask,0,xx+5,yy+5,10,w-9,31,c_gray,1)
+draw_set_halign(fa_left)
+draw_set_valign(fa_center)
+draw_set_color(c_white)
+draw_set_font(fnt_window_caption)
+draw_text(xx+10,yy+20,caption)
+//Border
+//draw_set_color(make_color_rgb(100,100,100))
+//draw_roundrect(x,y,xx+w,yy+h,1)
+//Footer
+draw_sprite(img_window_hint_bottom,0,xx+(w/2),yy+h-3)
+//Corner
+draw_sprite(img_window_hint_corner,0,xx+w-3,yy+h-3)
