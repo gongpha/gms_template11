@@ -15,7 +15,8 @@ if mouse_check_button(mb_left)
 	{
 		case "left":
 			window_set_cursor(cr_size_we)
-			//
+			w = (xx+w)-mouse_x
+			x = mouse_x
 		break;
 	
 		case "right":
@@ -25,7 +26,8 @@ if mouse_check_button(mb_left)
 	
 		case "top":
 			window_set_cursor(cr_size_ns)
-			//
+			h = (yy+h)-mouse-y
+			y = mouse_y
 		break;
 	
 		case "bottom":
@@ -36,21 +38,29 @@ if mouse_check_button(mb_left)
 		case "bottomleft":
 			window_set_cursor(cr_size_nesw)
 			h = mouse_y - y
+			w = (xx+w)-mouse_x
+			x = mouse_x
 		break;
 	
 		case "bottomright":
 			window_set_cursor(cr_size_nwse)
+			w = mouse_x - x
 			h = mouse_y - y
 		break;
 	
 		case "topleft":
 			window_set_cursor(cr_size_nwse)
-			h = mouse_y - y
+			w = (xx+w)-mouse_x
+			x = mouse_x
+			h = (yy+h)-mouse-y
+			y = mouse_y
 		break;
 	
 		case "topright":
 			window_set_cursor(cr_size_nesw)
-			h = mouse_y - y
+			h = (yy+h)-mouse-y
+			y = mouse_y
+			w = mouse_x - x
 		break;
 	}
 }
