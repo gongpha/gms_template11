@@ -9,7 +9,7 @@ drag_top = false
 drag_bottom = false
 X = x+15
 Y = y+45
-drag_size = 5
+drag_size = 10
 drag_mode = ""
 show_debug_overlay(1)
 window_init()
