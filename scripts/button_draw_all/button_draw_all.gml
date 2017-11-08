@@ -1,7 +1,6 @@
 /// @description Draw a button list
 var dm,groupname;
 var Dimg,Dind,Dx,Dy,Dw,Dh,Dbdr,Dclr,Dalph ,Dtext,Dtextcolor,Dtextfnt,Dena
-
 for(dm=0;dm<=_widget_button_idmax-1;dm++)
 {
 	groupname =	ds_grid_get(_widget_button_state,5,dm)
