@@ -7,7 +7,7 @@ if drag
 }
 w = clamp(w,minw,maxw)
 h = clamp(h,minh,maxh)
-if mouse_check_button(mb_left)
+if mouse_check_button(mb_left) and !(minw = w and minh = h and maxw = w and maxh = h)
 {
 	switch(drag_mode)
 	{
@@ -206,6 +206,7 @@ if debug{
 	draw_rectangle_color(xx+w-drag_size,yy+h-drag_size,xx+w,yy+h,c_red,c_red,c_red,c_red,1)
 
 	//TEXT
+	draw_set_color(c_black)
 	draw_set_font(fnt_small_deb)
 	draw_set_valign(fa_top)
 	draw_set_halign(fa_left)
