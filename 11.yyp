@@ -4,7 +4,7 @@
     "mvc": "1.0",
     "IsDnDProject": false,
     "configs": [
-        
+        "default"
     ],
     "option_ecma": false,
     "parentProject": {
@@ -51,6 +51,14 @@
             "Value": {
                 "id": "497f57b2-3539-4053-9d0b-8874b604ed4a",
                 "resourcePath": "scripts\\mmn_play\\mmn_play.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "126ec872-4f6a-461d-af45-d55737a83afb",
+            "Value": {
+                "id": "5f5324a3-e27d-4eb2-b7ad-3fa454171492",
+                "resourcePath": "scripts\\draw_text_outline\\draw_text_outline.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -487,6 +495,14 @@
             }
         },
         {
+            "Key": "a569f7a7-de94-42ac-880e-7322d32cca00",
+            "Value": {
+                "id": "49ca8c6c-b11d-43fa-af28-3126bfdf2796",
+                "resourcePath": "scripts\\month_to_string\\month_to_string.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "a9188620-a624-4a5a-83ae-a1b53faf038b",
             "Value": {
                 "id": "78873420-2bfb-4012-a989-7b6933de331b",
@@ -532,6 +548,14 @@
                 "id": "0247672b-dac7-474d-8491-db4601fba862",
                 "resourcePath": "scripts\\view_update_toplayer\\view_update_toplayer.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "ae6f6146-24cb-48a7-a2d1-bcff37ff9c87",
+            "Value": {
+                "id": "c04d1601-1e85-4613-bde5-d36c46a080da",
+                "resourcePath": "objects\\obJ_game_start\\obJ_game_start.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -620,6 +644,14 @@
                 "id": "42205883-3fab-404f-8f9a-d89633283bc4",
                 "resourcePath": "scripts\\draw_box\\draw_box.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "d4585847-5522-4eb2-9525-49b3d297ace1",
+            "Value": {
+                "id": "7bd73444-fcd0-40a5-87b1-59627d9d8fa5",
+                "resourcePath": "fonts\\fnt_small_deb\\fnt_small_deb.yy",
+                "resourceType": "GMFont"
             }
         },
         {
@@ -771,11 +803,13 @@
         "ab7548ed-5205-49ca-9c90-d7689d7e2294",
         "d48dc266-9c62-4256-9fc8-691a27e7efa8",
         "6b7f817f-9f9e-4dc4-bf72-03c2ae5ef4d1",
+        "126ec872-4f6a-461d-af45-d55737a83afb",
         "1a49c4ba-7ad8-47e6-9199-163e9fe5c1f4",
         "e53fb236-3d7a-4f3a-a24f-28d94ba2b47b",
         "a078a27a-8040-42fd-a939-fe1cd4206739",
         "adacc3d7-bd22-4497-bf5d-f063a202b92e",
-        "ba70d6c0-9f08-4129-803f-a4ccc20096f0"
+        "ba70d6c0-9f08-4129-803f-a4ccc20096f0",
+        "a569f7a7-de94-42ac-880e-7322d32cca00"
     ],
     "tutorial": ""
 }

@@ -5,19 +5,16 @@ if drag
 	X = x+15
 	Y = y+45
 }
-xv = view_xview[0]
-yv = view_yview[0]
-xx = xv+x
-yy = yv+y
 if mouse_check_button(mb_left)
 {
 	switch(drag_mode)
 	{
 		case "left":
 			window_set_cursor(cr_size_we)
-			w = (xx+w)-mouse_x
+			w = (x+w)-mouse_x
 			x = mouse_x
-		break;
+			X = x+15
+			break;
 	
 		case "right":
 			window_set_cursor(cr_size_we)
@@ -26,8 +23,9 @@ if mouse_check_button(mb_left)
 	
 		case "top":
 			window_set_cursor(cr_size_ns)
-			h = (yy+h)-mouse-y
+			h = (y+h)-mouse_y
 			y = mouse_y
+			Y = y+45
 		break;
 	
 		case "bottom":
@@ -38,8 +36,9 @@ if mouse_check_button(mb_left)
 		case "bottomleft":
 			window_set_cursor(cr_size_nesw)
 			h = mouse_y - y
-			w = (xx+w)-mouse_x
+			w = (x+w)-mouse_x
 			x = mouse_x
+			X = x+15
 		break;
 	
 		case "bottomright":
@@ -50,27 +49,35 @@ if mouse_check_button(mb_left)
 	
 		case "topleft":
 			window_set_cursor(cr_size_nwse)
-			w = (xx+w)-mouse_x
+			w = (x+w)-mouse_x
 			x = mouse_x
-			h = (yy+h)-mouse-y
+			h = (y+h)-mouse_y
 			y = mouse_y
+			X = x+15
+			Y = y+45
 		break;
 	
 		case "topright":
 			window_set_cursor(cr_size_nesw)
-			h = (yy+h)-mouse-y
+			h = (y+h)-mouse_y
 			y = mouse_y
 			w = mouse_x - x
+			Y = y+45
 		break;
 	}
 }
+xv = view_xview[0]
+yv = view_yview[0]
+xx = xv+x
+yy = yv+y
+
 //Draging Script
 if mouse_area(xx+5,yy+5,xx+w-5,yy+35)
 {
     if mouse_check_button_pressed(mb_left)
     {
-        x_old = mouse_x - xx
-	    y_old = mouse_y - yy
+        x_old = mouse_x - x
+	    y_old = mouse_y - y
 	    drag = true
 	}
 }
@@ -103,60 +110,88 @@ draw_sprite(img_window_hint_corner,0,xx+w-3,yy+h-3)
 
 //----------Selecting dragmode----------//
 
-//Top
-if mouse_area(xx+drag_size,yy,xx+w-drag_size,yy+drag_size)
-{
-	window_set_cursor(cr_size_ns)
-	drag_mode = "top"
-}
-//Bottom
-if mouse_area(xx+drag_size,yy+h-drag_size,xx+w-drag_size,yy+h)
-{
-	window_set_cursor(cr_size_ns)
-	drag_mode = "bottom"
-}
-//Left
-if mouse_area(xx,yy+drag_size,xx+drag_size,yy+h-drag_size)
-{
-	window_set_cursor(cr_size_we)
-	drag_mode = "left"
-}
-//Right
-if mouse_area(xx+w-drag_size,yy+drag_size,xx+w,yy+h-drag_size)
-{
-	window_set_cursor(cr_size_we)
-	drag_mode = "right"
-}
-//Left-top
-if mouse_area(xx,yy,xx+drag_size,yy+drag_size)
-{
-	window_set_cursor(cr_size_nwse)
-	drag_mode = "topleft"
-}
-//Right-top
-if mouse_area(xx+w-drag_size,yy,xx+w,yy+drag_size)
-{
-	drag_mode = "topright"
-	window_set_cursor(cr_size_nesw)
-}
-//Left-bottom
-if mouse_area(xx,yy+h-drag_size,xx+drag_size,yy+h)
-{
-	drag_mode = "bottomleft"
-	window_set_cursor(cr_size_nesw)
-}
-//Right-bottom
-if mouse_area(xx+w-drag_size,yy+h-drag_size,xx+w,yy+h)
-{
-	drag_mode = "bottomright"
-	window_set_cursor(cr_size_nwse)
-}
 
+if !drag
+{
+	//Top
+	if mouse_area(xx+drag_size,yy,xx+w-drag_size,yy+drag_size)
+	{
+		window_set_cursor(cr_size_ns)
+		drag_mode = "top"
+	}
+	//Bottom
+	if mouse_area(xx+drag_size,yy+h-drag_size,xx+w-drag_size,yy+h)
+	{
+		window_set_cursor(cr_size_ns)
+		drag_mode = "bottom"
+	}
+	//Left
+	if mouse_area(xx,yy+drag_size,xx+drag_size,yy+h-drag_size)
+	{
+		window_set_cursor(cr_size_we)
+		drag_mode = "left"
+	}
+	//Right
+	if mouse_area(xx+w-drag_size,yy+drag_size,xx+w,yy+h-drag_size)
+	{
+		window_set_cursor(cr_size_we)
+		drag_mode = "right"
+	}
+	//Left-top
+	if mouse_area(xx,yy,xx+drag_size,yy+drag_size)
+	{
+		window_set_cursor(cr_size_nwse)
+		drag_mode = "topleft"
+	}
+	//Right-top
+	if mouse_area(xx+w-drag_size,yy,xx+w,yy+drag_size)
+	{
+		drag_mode = "topright"
+		window_set_cursor(cr_size_nesw)
+	}
+	//Left-bottom
+	if mouse_area(xx,yy+h-drag_size,xx+drag_size,yy+h)
+	{
+		drag_mode = "bottomleft"
+		window_set_cursor(cr_size_nesw)
+	}
+	//Right-bottom
+	if mouse_area(xx+w-drag_size,yy+h-drag_size,xx+w,yy+h)
+	{
+		drag_mode = "bottomright"
+		window_set_cursor(cr_size_nwse)
+	}
+}
 if mouse_check_button_released(mb_left)
 {
-	drag_mode = ""
 	drag = false
 }
 //----------Resize Action----------//
 
 script_execute(content)
+//----------Debug----------//
+//TOP
+draw_rectangle_color(xx+drag_size,yy,xx+w-drag_size,yy+drag_size,c_red,c_red,c_red,c_red,1)
+//BOTTOM
+draw_rectangle_color(xx+drag_size,yy+h-drag_size,xx+w-drag_size,yy+h,c_red,c_red,c_red,c_red,1)
+//LEFT
+draw_rectangle_color(xx,yy+drag_size,xx+drag_size,yy+h-drag_size,c_red,c_red,c_red,c_red,1)
+//RIGHT
+draw_rectangle_color(xx+w-drag_size,yy+drag_size,xx+w,yy+h-drag_size,c_red,c_red,c_red,c_red,1)
+//LEFT-TOP
+draw_rectangle_color(xx,yy,xx+drag_size,yy+drag_size,c_red,c_red,c_red,c_red,1)
+//RIGHT-TOP
+draw_rectangle_color(xx+w-drag_size,yy,xx+w,yy+drag_size,c_red,c_red,c_red,c_red,1)
+//LEFT-BOTTOM
+draw_rectangle_color(xx,yy+h-drag_size,xx+drag_size,yy+h,c_red,c_red,c_red,c_red,1)
+//RIGHT-BOTTOM
+draw_rectangle_color(xx+w-drag_size,yy+h-drag_size,xx+w,yy+h,c_red,c_red,c_red,c_red,1)
+
+//TEXT
+draw_set_font(fnt_small_deb)
+draw_set_valign(fa_top)
+draw_set_halign(fa_left)
+draw_text(xx,yy-20,"Window v.11 (" + string(UPDATE_DATE_DAY) + " " + month_to_string(UPDATE_DATE_MONTH) + " " + string(UPDATE_DATE_GYEAR) + ")")
+draw_set_valign(fa_bottom)
+draw_set_halign(fa_right)
+draw_text(xx+w-5,yy+h-5,"drag = "+string(drag)+"\ndrag_mode = "+string(drag_mode))
