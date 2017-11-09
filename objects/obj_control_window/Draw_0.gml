@@ -82,8 +82,8 @@ if mouse_check_button(mb_left) and !(minw = w and minh = h and maxw = w and maxh
 		break;
 	}
 }
-xv = view_xview[0]
-yv = view_yview[0]
+xv = camera_get_view_x(view_camera[0])
+yv = camera_get_view_y(view_camera[0])
 xx = xv+x
 yy = yv+y
 

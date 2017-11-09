@@ -3,9 +3,21 @@ key_right = keyboard_check(ord("D"))
 key_down = keyboard_check(ord("S"))
 key_jump = keyboard_check(ord("W"))
 
-if key_left
+
+move = (key_right - key_left)*8
+x += move
+
+camera_set_view_pos(view_camera[0],clamp(x - (view_wport[0] / 2),view_xport[0],view_wport[0]),clamp(y - (view_hport[0] / 2),view_yport[0],view_hport[0]))
+
+if key_right
 {
-	vspeed -= 5
+	facing = 1
+	image_speed = 1
 }
 
-view_update_toplayer()
+
+if key_left
+{
+	facing = -1
+	image_speed = 1
+}

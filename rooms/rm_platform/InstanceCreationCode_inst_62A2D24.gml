@@ -1,0 +1,1 @@
+global.playerID = id

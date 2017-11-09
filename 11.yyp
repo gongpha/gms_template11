@@ -31,6 +31,14 @@
     },
     "resources": [
         {
+            "Key": "00b39117-8aae-4044-8811-9edde53a336c",
+            "Value": {
+                "id": "2419e4f5-5174-42aa-a050-cb6bd84bef50",
+                "resourcePath": "objects\\obj_debugger\\obj_debugger.yy",
+                "resourceType": "GMObject"
+            }
+        },
+        {
             "Key": "011e578e-11bc-4f04-bc59-485d9c03d7fc",
             "Value": {
                 "id": "febcf636-0be9-4f6b-b774-f84f701664c0",
@@ -44,6 +52,14 @@
                 "id": "8ffe71dc-930a-47ae-a0d7-106054d3a7d2",
                 "resourcePath": "scripts\\button_draw_all\\button_draw_all.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "0890951e-fa03-440d-8b9e-778077f9141d",
+            "Value": {
+                "id": "a2fde415-5a8d-4545-b4d5-1fbadf70187d",
+                "resourcePath": "objects\\obj_platform\\obj_platform.yy",
+                "resourceType": "GMObject"
             }
         },
         {
@@ -567,6 +583,14 @@
             }
         },
         {
+            "Key": "b404283f-65f3-437c-a7c8-67e15083d152",
+            "Value": {
+                "id": "514b5457-363f-4010-9203-ed758d5433e3",
+                "resourcePath": "sprites\\img_editor_player_block\\img_editor_player_block.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b6e4d03b-5826-4568-b625-59febfadd2ed",
             "Value": {
                 "id": "d9be6169-38c9-4468-be7a-3d505a57561a",
@@ -692,6 +716,14 @@
                 "id": "38c5b831-370a-4287-88eb-9f65e7ec5702",
                 "resourcePath": "tilesets\\tile_dirt\\tile_dirt.yy",
                 "resourceType": "GMTileSet"
+            }
+        },
+        {
+            "Key": "f0cfa88e-3667-43ab-a8ff-2af958c4ab59",
+            "Value": {
+                "id": "75bc893c-82df-401c-add4-0ee83d3646b6",
+                "resourcePath": "objects\\obj_level_blocker\\obj_level_blocker.yy",
+                "resourceType": "GMObject"
             }
         },
         {
