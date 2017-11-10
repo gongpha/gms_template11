@@ -6,7 +6,8 @@
     "children": [
         "43725bff-6b20-4117-868f-022e5c032883",
         "72432cce-b851-4187-b33d-1c539027e6c5",
-        "b404283f-65f3-437c-a7c8-67e15083d152"
+        "b404283f-65f3-437c-a7c8-67e15083d152",
+        "105c1e58-6264-4ebe-899c-20add4542a9e"
     ],
     "filterType": "GMSprite",
     "folderName": "Editor",

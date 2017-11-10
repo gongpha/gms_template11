@@ -25,8 +25,15 @@ if key_left
 	image_speed = 1
 }
 
-
-
+if place_free(x,y+1)
+{
+	sprite_index = img_player_plat_body_air
+	image_speed = 0
+}
+else
+{
+	sprite_index = img_player_plat_body_def
+}
 if key_jump and !place_free(x,y+1)
 {
 	vspeed = -8
