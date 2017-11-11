@@ -21,5 +21,6 @@ if playerid != noone
 {
 	draw_sprite_ext(playerid.sprite_index,playerid.image_index,yourx-(playerid.sprite_width/2),(playerid.sprite_height/2),playerid.facing,1,0,c_white,1)
 	draw_set_halign(fa_right)
-	draw_text(yourx-(playerid.sprite_width/2),(playerid.sprite_height)+10,"name = "+string(playerid.charname)+"\ndepth = "+string(playerid.depth)+"\ngravity = "+string(playerid.gravity)+"\nx = "+string(playerid.x)+"\ny = "+string(playerid.y)+"\nvspeed = "+string(playerid.vspeed)+"\nhspeed = "+string(playerid.hspeed)+"\nimage_speed = "+string(playerid.image_speed)+"\nimage_index = "+string(playerid.image_index)+"\n\nCharacter Bound X = "+string(playerid.player_body_width)+"\nCharacter Bound Y = "+string(playerid.player_body_height)+"\nCharacter Ratio = "+playerid.player_body_ratio)
+	draw_text(yourx,(playerid.sprite_height)+10,"name = "+string(playerid.charname)+"\ndepth = "+string(playerid.depth)+"\ngravity = "+string(playerid.gravity)+"\nx = "+string(playerid.x)+"\ny = "+string(playerid.y)+"\nvspeed = "+string(playerid.vspeed)+"\nhspeed = "+string(playerid.hspeed)+"\nimage_speed = "+string(playerid.image_speed)+"\nimage_index = "+string(playerid.image_index)+"\n\nCharacter Bound X = "+string(playerid.player_body_width)+"\nCharacter Bound Y = "+string(playerid.player_body_height)+"\nCharacter Ratio = "+playerid.player_body_ratio+"\n\nPlayer State = "+string(playerid.player_state))
+	draw_text(yourx-120,0,"speed = "+string(playerid.move))
 }

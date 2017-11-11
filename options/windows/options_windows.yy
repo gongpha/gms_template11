@@ -19,7 +19,7 @@
     "option_windows_license": "${options_dir}\\windows\\installer\\license.txt",
     "option_windows_nsis_file": "${options_dir}\\windows\\installer\\nsis_script.nsi",
     "option_windows_product_info": "Template 11",
-    "option_windows_resize_window": false,
+    "option_windows_resize_window": true,
     "option_windows_save_location": 0,
     "option_windows_scale": 1,
     "option_windows_sleep_margin": 10,

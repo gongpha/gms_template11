@@ -391,6 +391,14 @@
             }
         },
         {
+            "Key": "79f33f1b-e9e0-4c97-9022-9881608d86e9",
+            "Value": {
+                "id": "1b42582b-d0e9-4a2d-997b-4978416444c7",
+                "resourcePath": "scripts\\color_converter\\color_converter.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "7b50b754-3cd9-4b34-a8bd-54e66d51e636",
             "Value": {
                 "id": "1642fe92-3785-495b-a577-24d325f515f9",
@@ -647,6 +655,14 @@
             }
         },
         {
+            "Key": "b7572142-f1bd-4e59-ad13-ffe7c120f93f",
+            "Value": {
+                "id": "9f9b1c64-2f39-45d1-8e95-1c728f115a2c",
+                "resourcePath": "sprites\\img_skyempty\\img_skyempty.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "b8fe1103-a323-4e1f-bc3d-b5d395dc3958",
             "Value": {
                 "id": "9c7994f2-3a13-43da-b262-20f5c827d91f",
@@ -755,6 +771,14 @@
             "Value": {
                 "id": "d82c35b0-caf0-4c3c-8892-ba610b3c89f6",
                 "resourcePath": "scripts\\winscr_gamemodechoose\\winscr_gamemodechoose.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "e576c51b-a099-4af0-b61d-7490dd792011",
+            "Value": {
+                "id": "7a7e0760-7dc6-4c4b-a536-1a43b44b7347",
+                "resourcePath": "scripts\\game_core_starter\\game_core_starter.yy",
                 "resourceType": "GMScript"
             }
         },
@@ -889,7 +913,9 @@
         "a078a27a-8040-42fd-a939-fe1cd4206739",
         "adacc3d7-bd22-4497-bf5d-f063a202b92e",
         "ba70d6c0-9f08-4129-803f-a4ccc20096f0",
-        "a569f7a7-de94-42ac-880e-7322d32cca00"
+        "a569f7a7-de94-42ac-880e-7322d32cca00",
+        "e576c51b-a099-4af0-b61d-7490dd792011",
+        "79f33f1b-e9e0-4c97-9022-9881608d86e9"
     ],
     "tutorial": ""
 }
