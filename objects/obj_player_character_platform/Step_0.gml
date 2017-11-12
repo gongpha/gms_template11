@@ -4,9 +4,9 @@ key_down = keyboard_check(ord("S"))
 key_jump = keyboard_check_pressed(vk_space)
 
 key_h = (key_right - key_left)
-if place_free(x,y+1)
+if place_free(x,y+vspeed+1)
 {
-	gravity = 0.5
+	gravity = 0.1
 }
 else
 {
@@ -15,11 +15,11 @@ else
 }
 if (player_state = GAME_PLAYER_STATE_AIR)
 {
-	move = (key_right - key_left)*(walk_speed/2)
+	move = (key_right - key_left)*((walk_speed/2)*place_free(x+((key_right - key_left)*walk_speed),y))
 }
 else
 {
-	move = (key_right - key_left)*walk_speed
+	move = (key_right - key_left)*(walk_speed*place_free(x+((key_right - key_left)*walk_speed),y))
 }
 x += move
 
@@ -49,7 +49,7 @@ if key_h = 0
 	image_speed = 0
 	image_index = 0
 }
-if place_free(x,y+1)
+if place_free(x,y+vspeed+1)
 {
 	sprite_index = img_player_plat_body_air
 	player_state = GAME_PLAYER_STATE_AIR
@@ -61,9 +61,9 @@ else
 }
 if key_jump and !place_free(x,y+1)
 {
-	vspeed = -12
+	vspeed = -5
 }
-if vspeed = 11
+if vspeed = 5
 {
-	vspeed = 11
+	vspeed = 5
 }
