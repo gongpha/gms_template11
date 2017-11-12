@@ -3,7 +3,7 @@
     "modelName": "GMiOSOptions",
     "mvc": "1.0",
     "name": "iOS",
-    "option_ios_bundle_name": "com.company.game",
+    "option_ios_bundle_name": "com.kongpha.tem11",
     "option_ios_devices": 2,
     "option_ios_display_name": "Template 11",
     "option_ios_facebook_app_display_name": "",
