@@ -47,6 +47,8 @@ global._game_depth_background8 = 8
 global._game_depth_background9 = 9
 global._game_depth_background10 = 10
 
+//character
+character_body_scheme()
 //Global :: Console
 view_set_wport(view_camera[0],800)
 view_set_hport(view_camera[0],450)

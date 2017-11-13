@@ -223,6 +223,14 @@
             }
         },
         {
+            "Key": "45b80884-8bf6-4de1-a99d-52f4fa305eaf",
+            "Value": {
+                "id": "26468282-7d5c-48cc-9398-ed88d2845abd",
+                "resourcePath": "sprites\\img_player_plat_test_air\\img_player_plat_test_air.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
             "Key": "4d1800a5-654b-4fc4-9d61-4ce452aee95f",
             "Value": {
                 "id": "d4f8b554-0f19-4157-9519-f2c0b49b97ee",
@@ -308,6 +316,14 @@
                 "id": "7e8c00b8-4ad6-49f4-97c4-3ad10dbe04a2",
                 "resourcePath": "scripts\\mouse_area\\mouse_area.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "6be73e10-f7ee-4e3c-b013-de3721c0ffa4",
+            "Value": {
+                "id": "3400d8b0-20f9-4888-823e-0b5cc01395a2",
+                "resourcePath": "sprites\\img_player_plat_test_body\\img_player_plat_test_body.yy",
+                "resourceType": "GMSprite"
             }
         },
         {
@@ -418,7 +434,7 @@
             "Key": "7e458fdf-ee9a-4109-a3ed-7d8aed211a68",
             "Value": {
                 "id": "fa021b6c-a86a-4c7d-95ef-68dce0730c1a",
-                "resourcePath": "sprites\\img_player_plat_body_air\\img_player_plat_body_air.yy",
+                "resourcePath": "sprites\\img_player_plat_def_air\\img_player_plat_def_air.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -426,7 +442,7 @@
             "Key": "7f323c55-0acf-4986-988e-ac87f38a6ddd",
             "Value": {
                 "id": "23915d64-4781-4b08-a302-70fc013416eb",
-                "resourcePath": "sprites\\img_player_plat_body_def\\img_player_plat_body_def.yy",
+                "resourcePath": "sprites\\img_player_plat_def_body\\img_player_plat_def_body.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -444,6 +460,14 @@
                 "id": "fcbf21a9-0881-4fd1-8a0c-01a2bf95deee",
                 "resourcePath": "options\\ios\\options_ios.yy",
                 "resourceType": "GMiOSOptions"
+            }
+        },
+        {
+            "Key": "86d37a8c-7a3b-4cb8-9257-03b17b7fe7fb",
+            "Value": {
+                "id": "19efd8f0-e194-42ae-a409-21414aecf893",
+                "resourcePath": "scripts\\character_body_scheme\\character_body_scheme.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -626,7 +650,7 @@
             "Key": "ae6f6146-24cb-48a7-a2d1-bcff37ff9c87",
             "Value": {
                 "id": "c04d1601-1e85-4613-bde5-d36c46a080da",
-                "resourcePath": "objects\\obJ_game_start\\obJ_game_start.yy",
+                "resourcePath": "objects\\obj_game_start\\obj_game_start.yy",
                 "resourceType": "GMObject"
             }
         },
@@ -889,6 +913,7 @@
     ],
     "script_order": [
         "921aa4c4-7056-4fa4-9661-a0a0184f7b09",
+        "86d37a8c-7a3b-4cb8-9257-03b17b7fe7fb",
         "d2a05736-b398-48ef-9a56-6249347acb30",
         "f9595017-61f6-4400-9068-93636bd726e3",
         "39f0b30f-1691-4732-b845-7680aad45957",

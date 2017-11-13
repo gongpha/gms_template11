@@ -51,13 +51,13 @@ if key_h = 0
 }
 if place_free(x,y+vspeed+1)
 {
-	sprite_index = img_player_plat_body_air
+	sprite_index = global._character_plat_air
 	player_state = GAME_PLAYER_STATE_AIR
 	image_speed = 0
 }
 else
 {
-	sprite_index = img_player_plat_body_def
+	sprite_index = global._character_plat_body
 }
 if key_jump and !place_free(x,y+1)
 {
