@@ -8,7 +8,7 @@ buttongroup = argument0
 //Check if can't find a data structure
 if !ds_exists(buttongroup,ds_type_list)
 {
-	show_debug_message("ERROR : Can't found \""+string(buttongroup)+"\".")
+	show_debug_message("SEMIERROR : Can't found \""+string(buttongroup)+"\".")
 	exit;
 }
 for(km=0;km<=_widget_button_idmax;km++)

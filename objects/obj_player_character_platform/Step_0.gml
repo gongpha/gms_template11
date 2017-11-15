@@ -32,7 +32,10 @@ if key_h = 1
 {
 	player_state = GAME_PLAYER_STATE_WALK
 	facing = 1
-	image_speed = 1
+	if place_free(x+1,y)
+	{
+		image_speed = 1
+	}
 }
 
 
@@ -49,16 +52,23 @@ if key_h = 0
 	image_speed = 0
 	image_index = 0
 }
-if place_free(x,y+vspeed+1)
+if place_free(x,y+(vspeed*walk_speed))
 {
 	sprite_index = global._character_plat_air
 	player_state = GAME_PLAYER_STATE_AIR
+	image_index = 0
 	image_speed = 0
 }
 else
 {
 	sprite_index = global._character_plat_body
 }
+if !place_free(x+(hspeed*walk_speed),y)
+{
+	image_index = 0
+	image_speed = 0
+}
+
 if key_jump and !place_free(x,y+1)
 {
 	vspeed = -5

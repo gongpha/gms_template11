@@ -559,6 +559,14 @@
             }
         },
         {
+            "Key": "9aa018e4-f790-4b00-9511-fbd37ea1088c",
+            "Value": {
+                "id": "4779ac0b-4382-4779-9d5e-d6eb85554596",
+                "resourcePath": "views\\9aa018e4-f790-4b00-9511-fbd37ea1088c.yy",
+                "resourceType": "GMFolder"
+            }
+        },
+        {
             "Key": "9cb46733-6d88-4d3b-b3b9-1d633e804dd7",
             "Value": {
                 "id": "005287fe-8888-4413-940b-89d3539410d2",
@@ -655,6 +663,14 @@
             }
         },
         {
+            "Key": "ae680492-6611-4b3f-adea-7fea00a70062",
+            "Value": {
+                "id": "e3673352-7d2c-436f-ba02-9640ec151e9a",
+                "resourcePath": "scripts\\checkbox_init\\checkbox_init.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "ae6f6146-24cb-48a7-a2d1-bcff37ff9c87",
             "Value": {
                 "id": "c04d1601-1e85-4613-bde5-d36c46a080da",
@@ -722,7 +738,7 @@
             "Key": "baa477ff-9a1e-429f-abe5-784f6168297f",
             "Value": {
                 "id": "203cd343-7705-4ff8-8cd7-500fd5769a6a",
-                "resourcePath": "sprites\\img_button\\img_button.yy",
+                "resourcePath": "sprites\\img_widget_button\\img_widget_button.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -732,6 +748,14 @@
                 "id": "48e3b6a4-b6c1-4399-b9e1-254f3f5b45e4",
                 "resourcePath": "scripts\\window_create\\window_create.yy",
                 "resourceType": "GMScript"
+            }
+        },
+        {
+            "Key": "c065f6d5-3870-4e95-a750-8fae7edb6359",
+            "Value": {
+                "id": "546b95ac-dd5e-44b8-acc4-c351eeea6859",
+                "resourcePath": "views\\c065f6d5-3870-4e95-a750-8fae7edb6359.yy",
+                "resourceType": "GMFolder"
             }
         },
         {
@@ -747,6 +771,14 @@
             "Value": {
                 "id": "679f491e-90a5-41f4-a9ee-0d208f828832",
                 "resourcePath": "sprites\\img_mask_64x64_center\\img_mask_64x64_center.yy",
+                "resourceType": "GMSprite"
+            }
+        },
+        {
+            "Key": "c687d474-8c24-43f7-bbac-df5b60ab35c3",
+            "Value": {
+                "id": "bd6ba92c-ff2d-45d5-82e5-dbf203127a7d",
+                "resourcePath": "sprites\\img_widget_checkbox\\img_widget_checkbox.yy",
                 "resourceType": "GMSprite"
             }
         },
@@ -796,6 +828,14 @@
                 "id": "7598d13f-0f66-483e-9d20-2a7f6f2e91e9",
                 "resourcePath": "views\\dabfdbf4-a414-4459-aa0a-75391b02838a.yy",
                 "resourceType": "GMFolder"
+            }
+        },
+        {
+            "Key": "e179af57-833c-4085-89f3-78ca6453144b",
+            "Value": {
+                "id": "c1dee342-7dcd-4d20-9974-a9385ffbb37d",
+                "resourcePath": "scripts\\checkbox_create\\checkbox_create.yy",
+                "resourceType": "GMScript"
             }
         },
         {
@@ -911,6 +951,14 @@
             }
         },
         {
+            "Key": "fd3870fe-6170-4f5a-9f05-b9c736d90ffa",
+            "Value": {
+                "id": "6f2a3b52-9f39-4d43-8fa2-56ebc3a0cec9",
+                "resourcePath": "notes\\Checkbox info.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "fec562ad-471f-40d4-9666-2902986e2b48",
             "Value": {
                 "id": "4186974e-9cb0-4c01-ad5f-4b722864fca7",
@@ -941,6 +989,8 @@
         "295ac98f-db60-4b30-a6ef-7b0168e44b21",
         "73e0f66d-44fb-4fa1-b17a-8bc563bbdd1e",
         "bc72ed26-1a41-44bf-b5fa-a4e5c4f0f20f",
+        "e179af57-833c-4085-89f3-78ca6453144b",
+        "ae680492-6611-4b3f-adea-7fea00a70062",
         "0915a5e4-2cdc-4e52-b375-2c2cb7926df1",
         "67207506-12c4-4411-b9e1-eb148113ccc3",
         "4d1800a5-654b-4fc4-9d61-4ce452aee95f",

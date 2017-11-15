@@ -2,7 +2,7 @@
     "id": "baa477ff-9a1e-429f-abe5-784f6168297f",
     "modelName": "GMSprite",
     "mvc": "1.12",
-    "name": "img_button",
+    "name": "img_widget_button",
     "For3D": false,
     "HTile": false,
     "VTile": false,

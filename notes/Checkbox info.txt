@@ -1,0 +1,7 @@
+0 = id
+1 = checked
+2 = image
+3 = shadow on it
+4 = text
+5 = color
+6 = alpha

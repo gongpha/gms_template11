@@ -5,7 +5,8 @@
     "name": "58f2e895-ed3a-45f6-b4b4-3eaffa73c3c6",
     "children": [
         "f8f2f8d8-51cf-4469-acf3-4aae6ac245e6",
-        "88f3fdf2-6aa0-48cf-b577-9763318e9f1a"
+        "88f3fdf2-6aa0-48cf-b577-9763318e9f1a",
+        "9aa018e4-f790-4b00-9511-fbd37ea1088c"
     ],
     "filterType": "GMScript",
     "folderName": "Widgets",
