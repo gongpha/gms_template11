@@ -5,3 +5,8 @@
 4 = text
 5 = color
 6 = alpha
+7 = unchecked index
+8 = checked index
+9 = some checked index
+10 = x
+11 = y
