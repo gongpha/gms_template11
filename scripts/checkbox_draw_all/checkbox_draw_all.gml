@@ -1,7 +1,12 @@
 /// @description Draw all checkbox
 var dm;
 var Dimg,Dind,Dx,Dy,Dclr,Dalph ,Dtext,Dcolor,Dcheck,DinxU,DinxC,DinxUN,Dshad
-for(dm=0;dm<=_widget_button_idmax-1;dm++)
+if !variable_instance_get(id,"_widget_checkbox_state")
+{
+	show_debug_message("SEMIERROR: No checkbox data")
+	exit;
+}
+for(dm=0;dm<=_widget_checkbox_count-1;dm++)
 {
 	Dcheck = ds_grid_get(_widget_checkbox_state,1,dm)
 	Dimg = ds_grid_get(_widget_checkbox_state,2,dm)
