@@ -215,3 +215,5 @@ if debug{
 	draw_set_halign(fa_right)
 	draw_text(xx+w-10,yy+h-10,"x = "+string(x)+"\ny = "+string(y)+"\nw = "+string(w)+"\nh = "+string(h)+"\nmaxw = "+string(maxw)+"\nmaxh = "+string(maxh)+"\nminw = "+string(minw)+"\nminh = "+string(maxh)+"\ndrag = "+string(drag)+"\ndrag_mode = "+string(drag_mode))
 }
+
+is_drag = drag

@@ -431,22 +431,6 @@
             }
         },
         {
-            "Key": "7e458fdf-ee9a-4109-a3ed-7d8aed211a68",
-            "Value": {
-                "id": "fa021b6c-a86a-4c7d-95ef-68dce0730c1a",
-                "resourcePath": "sprites\\img_player_plat_def_air\\img_player_plat_def_air.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
-            "Key": "7f323c55-0acf-4986-988e-ac87f38a6ddd",
-            "Value": {
-                "id": "23915d64-4781-4b08-a302-70fc013416eb",
-                "resourcePath": "sprites\\img_player_plat_def_body\\img_player_plat_def_body.yy",
-                "resourceType": "GMSprite"
-            }
-        },
-        {
             "Key": "8359c5d2-4a18-4f2c-bb3e-6cbbb238810f",
             "Value": {
                 "id": "8ab73ba2-ae1a-4a09-99ec-0139fc523021",
