@@ -703,6 +703,14 @@
             }
         },
         {
+            "Key": "b77b90e8-6da0-494b-adcd-991427c0b347",
+            "Value": {
+                "id": "76556eb4-55df-46b5-9e7f-82065a7233d6",
+                "resourcePath": "notes\\kprp_pref.yy",
+                "resourceType": "GMNotes"
+            }
+        },
+        {
             "Key": "b8fe1103-a323-4e1f-bc3d-b5d395dc3958",
             "Value": {
                 "id": "9c7994f2-3a13-43da-b262-20f5c827d91f",

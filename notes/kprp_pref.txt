@@ -1,0 +1,8 @@
+?pref_version 11?
+?namesys "TEM11"?
+?aut "gongpha"?
+?cust_scr
+	?met main
+		user_access << #PUBLIC
+	?
+?
