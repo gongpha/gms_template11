@@ -91,7 +91,6 @@ if mouse_check_button(mb_left) and !(minw = w and minh = h and maxw = w and maxh
 			{
 				h = (y+h)-mouse_y
 			}
-			y = mouse_y
 			w = mouse_x - x
 			w = clamp(w,minw,maxw)
 			heit = (y+h)-mouse_y

@@ -47,6 +47,14 @@
             }
         },
         {
+            "Key": "01e25258-e002-459f-bbf7-9f7ad75c2923",
+            "Value": {
+                "id": "78f08dc5-4f4c-4c63-aed8-68d170a6220e",
+                "resourcePath": "scripts\\checkbox_state_converter\\checkbox_state_converter.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "07701378-bc55-4850-8b11-9432bd268549",
             "Value": {
                 "id": "8ffe71dc-930a-47ae-a0d7-106054d3a7d2",
@@ -1018,6 +1026,7 @@
         "ae680492-6611-4b3f-adea-7fea00a70062",
         "93f41f95-795b-478b-8294-567c6bb03a72",
         "f25b51ad-4ac3-4cc8-87b2-fee2b48452e0",
+        "01e25258-e002-459f-bbf7-9f7ad75c2923",
         "0915a5e4-2cdc-4e52-b375-2c2cb7926df1",
         "67207506-12c4-4411-b9e1-eb148113ccc3",
         "4d1800a5-654b-4fc4-9d61-4ce452aee95f",

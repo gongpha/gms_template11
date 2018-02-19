@@ -6,6 +6,7 @@
     "option_windows_allow_fullscreen_switching": false,
     "option_windows_borderless": false,
     "option_windows_company_info": "Kongpha",
+    "option_windows_copy_exe_to_dest": false,
     "option_windows_copyright_info": "(c) 2014-2017 Kongpha",
     "option_windows_description_info": "Kongpha Game Template 11",
     "option_windows_display_cursor": true,
