@@ -11,6 +11,7 @@ X = x+15
 Y = y+45
 drag_size = 10
 drag_mode = ""
+drag_side_lock = false
 
 debug = true
 show_debug_overlay(1)

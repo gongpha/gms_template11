@@ -527,6 +527,14 @@
             }
         },
         {
+            "Key": "922a5f03-d969-4c7d-b509-e97667c30752",
+            "Value": {
+                "id": "20e5948c-9697-4529-b333-f8c1807279f6",
+                "resourcePath": "scripts\\window_check_resizable\\window_check_resizable.yy",
+                "resourceType": "GMScript"
+            }
+        },
+        {
             "Key": "93f41f95-795b-478b-8294-567c6bb03a72",
             "Value": {
                 "id": "a0c8db08-f9f1-40d6-ac4c-d9b0fff7c9bb",
@@ -767,6 +775,14 @@
             }
         },
         {
+            "Key": "c3c1f726-d589-448a-8e0f-68e5f1f7afc7",
+            "Value": {
+                "id": "ecb3e03a-1f67-4fee-9999-6d38ed5978e4",
+                "resourcePath": "extensions\\GooglePlayServicesExtension\\GooglePlayServicesExtension.yy",
+                "resourceType": "GMExtension"
+            }
+        },
+        {
             "Key": "c503499b-d71b-4167-9b94-53f80afd880e",
             "Value": {
                 "id": "679f491e-90a5-41f4-a9ee-0d208f828832",
@@ -997,6 +1013,7 @@
         "295ac98f-db60-4b30-a6ef-7b0168e44b21",
         "73e0f66d-44fb-4fa1-b17a-8bc563bbdd1e",
         "bc72ed26-1a41-44bf-b5fa-a4e5c4f0f20f",
+        "922a5f03-d969-4c7d-b509-e97667c30752",
         "e179af57-833c-4085-89f3-78ca6453144b",
         "ae680492-6611-4b3f-adea-7fea00a70062",
         "93f41f95-795b-478b-8294-567c6bb03a72",

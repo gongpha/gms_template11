@@ -18,4 +18,5 @@ ds_grid_resize(_widget_button_style,Mw,Mw+1)
 ds_grid_add(_widget_button_style,0,_widget_button_groupmax,argument0)
 ds_list_add(_widget_button_namelist,argument0)
 _widget_button_groupmax += 1
-variable_instance_set(id,argument0,_widget_button_groupmax-1)
+//variable_instance_set(id,argument0,_widget_button_groupmax-1)
+return _widget_button_groupmax-1;

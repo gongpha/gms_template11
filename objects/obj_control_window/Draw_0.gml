@@ -4,19 +4,31 @@ if drag
 	y = mouse_y - y_old
 	X = x+15
 	Y = y+45
+	xclamp = 0
+	yclamp = 0
 }
 w = clamp(w,minw,maxw)
 h = clamp(h,minh,maxh)
 if mouse_check_button(mb_left) and !(minw = w and minh = h and maxw = w and maxh = h)
 {
+	drag_side_lock = true
 	switch(drag_mode)
 	{
 		case "left":
 			window_set_cursor(cr_size_we)
-			w = (x+w)-mouse_x
+			/*xclamp = 0
+			w = (x+clamp(w,minw,maxw))-mouse_x
+			if w < minw or w > maxw
+			{
+				xclamp = 1
+			}
 			w = clamp(w,minw,maxw)
-			x = mouse_x
-			X = x+15
+			if 1{x = mouse_x}*/
+			widt = (x+w)-mouse_x
+			widd = max(minw-widt,0)
+			w = max((x+w-mouse_x),minw)
+			x = mouse_x-widd
+			 X = x+15
 			break;
 	
 		case "right":
@@ -27,9 +39,10 @@ if mouse_check_button(mb_left) and !(minw = w and minh = h and maxw = w and maxh
 	
 		case "top":
 			window_set_cursor(cr_size_ns)
-			h = (y+h)-mouse_y
-			h = clamp(h,minh,maxh)
-			y = mouse_y
+			heit = (y+h)-mouse_y
+			heid = max(minh-heit,0)
+			h = max((y+h-mouse_y),minh)
+			y = mouse_y-heid
 			Y = y+45
 		break;
 	
@@ -43,9 +56,10 @@ if mouse_check_button(mb_left) and !(minw = w and minh = h and maxw = w and maxh
 			window_set_cursor(cr_size_nesw)
 			h = mouse_y - y
 			h = clamp(h,minh,maxh)
-			w = (x+w)-mouse_x
-			w = clamp(w,minw,maxw)
-			x = mouse_x
+			widt = (x+w)-mouse_x
+			widd = max(minw-widt,0)
+			w = max((x+w-mouse_x),minw)
+			x = mouse_x-widd
 			X = x+15
 		break;
 	
@@ -59,12 +73,14 @@ if mouse_check_button(mb_left) and !(minw = w and minh = h and maxw = w and maxh
 	
 		case "topleft":
 			window_set_cursor(cr_size_nwse)
-			w = (x+w)-mouse_x
-			w = clamp(w,minw,maxw)
-			x = mouse_x
-			h = (y+h)-mouse_y
-			h = clamp(h,minh,maxh)
-			y = mouse_y
+			widt = (x+w)-mouse_x
+			widd = max(minw-widt,0)
+			w = max((x+w-mouse_x),minw)
+			x = mouse_x-widd
+			heit = (y+h)-mouse_y
+			heid = max(minh-heit,0)
+			h = max((y+h-mouse_y),minh)
+			y = mouse_y-heid
 			X = x+15
 			Y = y+45
 		break;
@@ -78,6 +94,10 @@ if mouse_check_button(mb_left) and !(minw = w and minh = h and maxw = w and maxh
 			y = mouse_y
 			w = mouse_x - x
 			w = clamp(w,minw,maxw)
+			heit = (y+h)-mouse_y
+			heid = max(minh-heit,0)
+			h = max((y+h-mouse_y),minh)
+			y = mouse_y-heid
 			Y = y+45
 		break;
 	}
@@ -87,17 +107,31 @@ yv = camera_get_view_y(view_camera[0])
 xx = xv+x
 yy = yv+y
 
-//Draging Script
-if mouse_area(xx+5,yy+5,xx+w-5,yy+35)
+//Draging Position Script
+if window_check_resizable(id)
 {
-    if mouse_check_button_pressed(mb_left)
-    {
-        x_old = mouse_x - x
-	    y_old = mouse_y - y
-	    drag = true
+	if mouse_area(xx+5,yy+5,xx+w-5,yy+35)
+	{
+	    if mouse_check_button_pressed(mb_left)
+	    {
+	        x_old = mouse_x - x
+		    y_old = mouse_y - y
+		    drag = true
+		}
 	}
 }
-
+else
+{
+	if mouse_area(xx,yy,xx+w,yy+35)
+	{
+	    if mouse_check_button_pressed(mb_left)
+	    {
+	        x_old = mouse_x - x
+		    y_old = mouse_y - y
+		    drag = true
+		}
+	}
+}
 
 //Shadow
 draw_set_color(c_black)
@@ -118,16 +152,19 @@ draw_text(xx+10,yy+20,caption)
 //Border
 //draw_set_color(make_color_rgb(100,100,100))
 //draw_roundrect(x,y,xx+w,yy+h,1)
-//Footer
-draw_sprite(img_window_hint_bottom,0,xx+(w/2),yy+h-3)
-//Corner
-draw_sprite(img_window_hint_corner,0,xx+w-3,yy+h-3)
 
+if window_check_resizable(id)
+{
+	//Footer
+	draw_sprite(img_window_hint_bottom,0,xx+(w/2),yy+h-3)
+	//Corner
+	draw_sprite(img_window_hint_corner,0,xx+w-3,yy+h-3)
+}
 
 //----------Selecting dragmode----------//
 
 
-if !drag
+if !drag and window_check_resizable(id) and !drag_side_lock
 {
 	//Top
 	if mouse_area(xx+drag_size,yy,xx+w-drag_size,yy+drag_size)
@@ -181,6 +218,14 @@ if !drag
 if mouse_check_button_released(mb_left)
 {
 	drag = false
+	drag_side_lock = false
+}
+if mouse_check_button_pressed(mb_left)
+{
+	curW = w
+	curH = h
+	curX = X
+	curY = y
 }
 //----------Resize Action----------//
 
@@ -188,22 +233,30 @@ if mouse_check_button_released(mb_left)
 script_execute(content)
 //----------Debug----------//
 if debug{
-	//TOP
-	draw_rectangle_color(xx+drag_size,yy,xx+w-drag_size,yy+drag_size,c_red,c_red,c_red,c_red,1)
-	//BOTTOM
-	draw_rectangle_color(xx+drag_size,yy+h-drag_size,xx+w-drag_size,yy+h,c_red,c_red,c_red,c_red,1)
-	//LEFT
-	draw_rectangle_color(xx,yy+drag_size,xx+drag_size,yy+h-drag_size,c_red,c_red,c_red,c_red,1)
-	//RIGHT
-	draw_rectangle_color(xx+w-drag_size,yy+drag_size,xx+w,yy+h-drag_size,c_red,c_red,c_red,c_red,1)
-	//LEFT-TOP
-	draw_rectangle_color(xx,yy,xx+drag_size,yy+drag_size,c_red,c_red,c_red,c_red,1)
-	//RIGHT-TOP
-	draw_rectangle_color(xx+w-drag_size,yy,xx+w,yy+drag_size,c_red,c_red,c_red,c_red,1)
-	//LEFT-BOTTOM
-	draw_rectangle_color(xx,yy+h-drag_size,xx+drag_size,yy+h,c_red,c_red,c_red,c_red,1)
-	//RIGHT-BOTTOM
-	draw_rectangle_color(xx+w-drag_size,yy+h-drag_size,xx+w,yy+h,c_red,c_red,c_red,c_red,1)
+	if window_check_resizable(id)
+	{
+		//TOP
+		draw_rectangle_color(xx+drag_size,yy,xx+w-drag_size,yy+drag_size,c_red,c_red,c_red,c_red,1)
+		//BOTTOM
+		draw_rectangle_color(xx+drag_size,yy+h-drag_size,xx+w-drag_size,yy+h,c_red,c_red,c_red,c_red,1)
+		//LEFT
+		draw_rectangle_color(xx,yy+drag_size,xx+drag_size,yy+h-drag_size,c_red,c_red,c_red,c_red,1)
+		//RIGHT
+		draw_rectangle_color(xx+w-drag_size,yy+drag_size,xx+w,yy+h-drag_size,c_red,c_red,c_red,c_red,1)
+		//LEFT-TOP
+		draw_rectangle_color(xx,yy,xx+drag_size,yy+drag_size,c_red,c_red,c_red,c_red,1)
+		//RIGHT-TOP
+		draw_rectangle_color(xx+w-drag_size,yy,xx+w,yy+drag_size,c_red,c_red,c_red,c_red,1)
+		//LEFT-BOTTOM
+		draw_rectangle_color(xx,yy+h-drag_size,xx+drag_size,yy+h,c_red,c_red,c_red,c_red,1)
+		//RIGHT-BOTTOM
+		draw_rectangle_color(xx+w-drag_size,yy+h-drag_size,xx+w,yy+h,c_red,c_red,c_red,c_red,1)
+		draw_rectangle_color(xx+drag_size,yy+drag_size,xx+w-drag_size,yy+35,c_blue,c_blue,c_blue,c_blue,1)
+	}
+	else
+	{
+		draw_rectangle_color(xx,yy,xx+w,yy+35,c_blue,c_blue,c_blue,c_blue,1)
+	}
 
 	//TEXT
 	draw_set_color(c_black)
@@ -213,7 +266,7 @@ if debug{
 	draw_text(xx,yy-20,"Window v.11 (" + string(UPDATE_DATE_DAY) + " " + month_to_string(UPDATE_DATE_MONTH) + " " + string(UPDATE_DATE_GYEAR) + ")")
 	draw_set_valign(fa_bottom)
 	draw_set_halign(fa_right)
-	draw_text(xx+w-10,yy+h-10,"x = "+string(x)+"\ny = "+string(y)+"\nw = "+string(w)+"\nh = "+string(h)+"\nmaxw = "+string(maxw)+"\nmaxh = "+string(maxh)+"\nminw = "+string(minw)+"\nminh = "+string(maxh)+"\ndrag = "+string(drag)+"\ndrag_mode = "+string(drag_mode))
+	draw_text(xx+w-10,yy+h-10,"x = "+string(x)+"\ny = "+string(y)+"\nw = "+string(w)+"\nh = "+string(h)+"\nmaxw = "+string(maxw)+"\nmaxh = "+string(maxh)+"\nminw = "+string(minw)+"\nminh = "+string(maxh)+"\ndrag = "+string(drag)+"\ndrag_mode = "+string(drag_mode)+"\ndrag_side_lock = "+string(drag_side_lock))
 }
 
 is_drag = drag

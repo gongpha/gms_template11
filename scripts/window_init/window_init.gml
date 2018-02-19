@@ -1,3 +1,4 @@
+
 global._window_inited = true
 global._window_using = 0
 global._window_count = 0

@@ -52,7 +52,7 @@ if key_h = 0
 	image_speed = 0
 	image_index = 0
 }
-if place_free(x,y+(vspeed*walk_speed))
+if !place_free(x,y+(vspeed*walk_speed))
 {
 	sprite_index = global._character_plat_air
 	player_state = GAME_PLAYER_STATE_AIR
