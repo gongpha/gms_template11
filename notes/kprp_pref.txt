@@ -6,3 +6,4 @@
 		user_access << #PUBLIC
 	?
 ?
+?optimize_mem TRUE?
