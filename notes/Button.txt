@@ -23,5 +23,5 @@ Button State ID
 2 = button script
 3 = button disabled script
 4 = button alternative script
-5 = button group
+5 = button style
 6 = Text

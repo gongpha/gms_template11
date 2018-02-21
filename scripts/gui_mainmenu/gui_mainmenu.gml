@@ -16,21 +16,19 @@ draw_text(logoX,logoY,"SDK 11 template")
 if event_type = 14
 {
 	//Buttons newgame
-	bttn_maingroup = button_group_create("bttn_maingroup")
-	button_create(bttn_maingroup,"bttn_play")
+	bttn_play = button_create("bttn_play")
 	button_set_location("bttn_play",30,buttonY,190,30)
-	button_set_style(bttn_maingroup,img_widget_button,0,16,c_white,c_black,fnt_button)
-	button_set_state("bttn_play",true,mmn_play,"none","none","def","NEW GAME")
-	
+	button_set_state("bttn_play",true,mmn_play,"?def?","?def?","?def?","NEW GAME")
+
 	//Buttons congame
-	button_create(bttn_maingroup,"bttn_play2")
+	bttn_play2 = button_create("bttn_play2")
 	button_set_location("bttn_play2",30,buttonY+40,190,30)
-	button_set_state("bttn_play2",true,mmn_play,"none","none","def","LOAD GAME")
+	button_set_state("bttn_play2",true,mmn_play,"?def?","?def?","?def?","LOAD GAME")
 	
 	//Buttons options
-	button_create(bttn_maingroup,"bttn_play3")
+	bttn_play3 = button_create("bttn_play3")
 	button_set_location("bttn_play3",30,buttonY+80,190,30)
-	button_set_state("bttn_play3",true,mmn_optionswindows,"none","none","def","OPTIONS")
+	button_set_state("bttn_play3",true,mmn_optionswindows,"?def?","?def?","?def?","SETTINGS")
 }
 
 
