@@ -1,11 +1,10 @@
 /// @description Do action a button list
-var dm,groupname;
+var dm;
 var Dx,Dy,Dw,Dh,Dsc1,Dsc2,Dsc3,Dena
 
 for(dm=0;dm<=_widget_button_idmax-1;dm++)
 {
 	Dena = ds_grid_get(_widget_button_state,1,dm)
-	groupname =	ds_grid_get(_widget_button_state,5,dm)
 	Dx =		ds_grid_get(_widget_button_location,1,dm)
 	Dy =		ds_grid_get(_widget_button_location,2,dm)
 	Dw =		ds_grid_get(_widget_button_location,3,dm)

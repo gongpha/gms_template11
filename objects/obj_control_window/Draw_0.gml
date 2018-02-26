@@ -262,7 +262,7 @@ if debug{
 	draw_set_font(fnt_small_deb)
 	draw_set_valign(fa_top)
 	draw_set_halign(fa_left)
-	draw_text(xx,yy-20,"Window v.11 (" + string(UPDATE_DATE_DAY) + " " + month_to_string(UPDATE_DATE_MONTH) + " " + string(UPDATE_DATE_GYEAR) + ")")
+	draw_text(xx,yy-20,"Window v.11")
 	draw_set_valign(fa_bottom)
 	draw_set_halign(fa_right)
 	draw_text(xx+w-10,yy+h-10,"x = "+string(x)+"\ny = "+string(y)+"\nw = "+string(w)+"\nh = "+string(h)+"\nmaxw = "+string(maxw)+"\nmaxh = "+string(maxh)+"\nminw = "+string(minw)+"\nminh = "+string(maxh)+"\ndrag = "+string(drag)+"\ndrag_mode = "+string(drag_mode)+"\ndrag_side_lock = "+string(drag_side_lock))

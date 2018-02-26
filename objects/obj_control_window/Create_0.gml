@@ -13,6 +13,6 @@ drag_size = 10
 drag_mode = ""
 drag_side_lock = false
 
-debug = true
+debug = false
 show_debug_overlay(1)
 window_init()

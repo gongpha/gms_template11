@@ -1,8 +1,3 @@
-#macro UPDATE_DATE_DAY 18
-#macro UPDATE_DATE_MONTH 02
-#macro UPDATE_DATE_GYEAR 2018
-#macro UPDATE_DATE_BYEAR 2561
-
 #macro EARLY_ACRESS true
 #macro DEVELOPER_MODE true
 #macro USERNAME "Someone"

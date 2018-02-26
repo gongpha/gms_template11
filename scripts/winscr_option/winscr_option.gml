@@ -2,6 +2,8 @@ draw_text(X,Y,"General")
 if !variable_instance_exists(id,"testch")
 {
 	checkbox_init()
-	checkbox_create("Test",X,Y+30,c_white,img_widget_checkbox,0,0,0)
+	testch = checkbox_create(false,"?def?",X,Y+30,"Fullscreen",32,32,mmn_cb_fullscreen)
 }
+checkbox_set_location(testch,X,Y+30,"?def?","?def?")
 checkbox_draw_all()
+checkbox_action()
