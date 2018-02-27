@@ -1,10 +1,10 @@
 /// @description Create a Checkbox data
 
-/// @param {string} startcheck?
+/// @param {real} startcheck?
 /// @param {real} style
 /// @param {real} x
 /// @param {real} y
-/// @param {real} text
+/// @param {string} text
 /// @param {real} w
 /// @param {real} h
 /// @param {real} updated
