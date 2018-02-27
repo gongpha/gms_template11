@@ -1,16 +1,2 @@
 # GameMakerStudio 2 Template 11
-Include Widgets:
-Button
-Window
-CheckBox
-RadioButton
-ProgressBar
-Dialog
-TextBox
-ListBox
-NotificationBox
-
-Include Gamemodes:
-Platform
-Topview
-3DFirstPerson
+The GMS2 Project that includes widgets, game cores, and extensions.
