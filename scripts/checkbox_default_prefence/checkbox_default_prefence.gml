@@ -14,5 +14,9 @@ _widget_checkbox_default = [
 	//h
 	32,
 	//scr
-	0
+	0,
+	//pressin
+	false,
+	//pressed
+	false
 ];

@@ -17,6 +17,8 @@ if _widget_checkbox_count > 0
 		_TEXT	= ds_grid_get(_widget_checkbox_state,5,dm)
 		_W		= ds_grid_get(_widget_checkbox_state,6,dm)
 		_H		= ds_grid_get(_widget_checkbox_state,7,dm)
+		_PRESSIN= ds_grid_get(_widget_checkbox_state,9,dm)
+		_PRESS	= ds_grid_get(_widget_checkbox_state,10,dm)
 		script_execute(_STYLE)
 	}
 }

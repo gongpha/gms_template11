@@ -16,16 +16,16 @@ for(dm=0;dm<=_widget_checkbox_count-1;dm++)
 	{
 		if mouse_check_button(mb_left)
 		{
-			if pressin[dm] = true
+			if _widget_checkbox_state[# 9, dm] = true
 			{
-				pressed[dm] = true
+				_widget_checkbox_state[# 10, dm] = true
 			}
 		}
 		else
 		{
-			pressin[dm] = true
+			_widget_checkbox_state[# 9, dm] = true
 		}
-		if mouse_check_button_released(mb_left) and pressed[dm] = true
+		if mouse_check_button_released(mb_left) and _widget_checkbox_state[# 10, dm] = true
 		{
 			if Dch = true
 			{
@@ -34,7 +34,7 @@ for(dm=0;dm<=_widget_checkbox_count-1;dm++)
 				{
 					script_execute(Dscr,false)
 				}
-				pressed[dm] = false
+				_widget_checkbox_state[# 10, dm] = false
 			}
 			if Dch = false
 			{
@@ -43,7 +43,7 @@ for(dm=0;dm<=_widget_checkbox_count-1;dm++)
 				{
 					script_execute(Dscr,true)
 				}
-				pressed[dm] = false
+				_widget_checkbox_state[# 10, dm] = false
 			}
 		}
 	}
@@ -51,8 +51,8 @@ for(dm=0;dm<=_widget_checkbox_count-1;dm++)
 	{
 		if mouse_check_button_pressed(mb_left)
 		{
-			pressin[dm] = false
+			_widget_checkbox_state[# 9, dm] = false
 		}
-		pressed[dm] = false
+		_widget_checkbox_state[# 10, dm] = false
 	}
 }

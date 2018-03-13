@@ -17,13 +17,13 @@ for(km=0;km<=_widget_button_idmax;km++)
 }
 //Add this buttonid to storage
 var Mw = ds_grid_width(_widget_button_location)
-var Mh = ds_grid_width(_widget_button_location)
+var Mh = ds_grid_height(_widget_button_location)
 //Resize a button storage
 ds_grid_resize(_widget_button_location,Mw,Mh+1)
 //Add Button Name of this button to location storage
 ds_grid_add(_widget_button_location,0,_widget_button_idmax,argument0)
 Mw = ds_grid_width(_widget_button_state)
-Mh = ds_grid_width(_widget_button_state)
+Mh = ds_grid_height(_widget_button_state)
 //Resize a button storage
 ds_grid_resize(_widget_button_state,Mw,Mh+1)
 //Add Button Name of this button to state storage

@@ -7,3 +7,5 @@
 6 = w
 7 = h
 8 = script when updated
+9 = pressin (When mouse clicks on it)
+10 = pressed (When mouse releases itself on the checkbox)
