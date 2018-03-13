@@ -1,4 +1,4 @@
-draw_text(X,Y,"General")
+draw_text(X,Y+5,"General")
 if !variable_instance_exists(id,"testch")
 {
 	checkbox_init()

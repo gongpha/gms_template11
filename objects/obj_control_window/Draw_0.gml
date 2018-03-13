@@ -109,7 +109,7 @@ yy = yv+y
 //Draging Position Script
 if window_check_resizable(id)
 {
-	if mouse_area(xx+5,yy+5,xx+w-5,yy+35)
+	if mouse_area(xx+5,yy+5,xx+w-26,yy+35)
 	{
 	    if mouse_check_button_pressed(mb_left)
 	    {
@@ -121,7 +121,7 @@ if window_check_resizable(id)
 }
 else
 {
-	if mouse_area(xx,yy,xx+w,yy+35)
+	if mouse_area(xx,yy,xx+w-26,yy+35)
 	{
 	    if mouse_check_button_pressed(mb_left)
 	    {
@@ -269,3 +269,31 @@ if debug{
 }
 
 is_drag = drag
+
+draw_sprite_ext(img_window_icon,0,xx+w-10,yy+12,1,1,0,make_color_rgb((co_pressed*175),(co_pressed*175),(co_pressed*175)),1)
+if (mouse_area(xx+w-26,yy+12,xx+w-10,yy+28))
+{
+	if mouse_check_button(mb_left)
+	{
+		if co_pressin = true
+		{
+			co_pressed = true
+		}
+	}
+	else
+	{
+		co_pressin = true
+	}
+	if mouse_check_button_released(mb_left) and co_pressed = true
+	{
+		instance_destroy(id)
+	}
+}
+else
+{
+	if mouse_check_button_pressed(mb_left)
+	{
+		co_pressin = false
+	}
+	co_pressed = false
+}
